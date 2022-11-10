@@ -1,5 +1,5 @@
 import { Plus, Minus } from 'phosphor-react'
-import { ButtonInput, InputContainer } from './styles'
+import { ButtonInput, InputCountContainer } from './styles'
 
 interface InputCounterProps {
     amountCoffee: number
@@ -21,7 +21,7 @@ export function InputCounter({
     }
 
     return (
-        <InputContainer>
+        <InputCountContainer>
             <ButtonInput type="button" onClick={handleIncrementAmountCoffee}>
                 <Plus size={14} />
             </ButtonInput>
@@ -29,6 +29,6 @@ export function InputCounter({
             <ButtonInput type="button" onClick={handleDecrementAmountCoffee}>
                 <Minus size={14} />
             </ButtonInput>
-        </InputContainer>
+        </InputCountContainer>
     )
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const InputContainer = styled.div`
+export const InputCountContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,7 @@ export const ButtonInput = styled.button`
 
     border: none;
 
-    color: ${(props) => props.theme.purple};
-
+    background: transparent;
     cursor: pointer;
 
     line-height: 130%;
