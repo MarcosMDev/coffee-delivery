@@ -9,7 +9,7 @@ import coffeeMacchiato from '../assets/macchiato.svg'
 import coffeeMochaccino from '../assets/mochaccino.svg'
 import coffeeChocolateQuente from '../assets/chocolate-quente.svg'
 import coffeeCubano from '../assets/cubano.svg'
-import coffeeHavaino from '../assets/habaiano.svg'
+import coffeeHavaino from '../assets/havaiano.svg'
 import coffeeArabe from '../assets/arabe.svg'
 import coffeeIrlandes from '../assets/irlandes.svg'
 
