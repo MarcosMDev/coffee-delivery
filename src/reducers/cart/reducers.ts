@@ -22,7 +22,16 @@ export function cartReducer(state: CartState, action: ActionProp): CartState {
     switch (action.type) {
         case ActionTypes.ADD_ITEM_CART:
             return produce(state, (draft) => {
-                draft.coffees.push(action.payload.coffee)
+                const coffeeIndex = state.coffees.findIndex(
+                    (coffee) => coffee.id === action.payload.coffee.id,
+                )
+
+                if (!coffeeIndex) {
+                    draft.coffees[coffeeIndex].amount +=
+                        action.payload.coffee.amount
+                } else {
+                    draft.coffees.push(action.payload.coffee)
+                }
             })
         case ActionTypes.REMOVE_ITEM_CART: {
             const newCoffeesAfterRemoval = state.coffees.filter(
