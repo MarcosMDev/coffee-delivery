@@ -1,10 +1,12 @@
+import coffeeExpresso from '../assets/expresso.svg'
+
 export const coffees = [
     {
         id: 1,
         tags: ['tradicional'],
         name: 'Expresso Tradicional',
         description: 'O tradicional café feito com água quente e grãos moídos',
-        photo: 'src/assets/expresso.svg',
+        photo: coffeeExpresso,
         price: 9.9,
     },
     {
