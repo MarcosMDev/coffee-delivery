@@ -63,7 +63,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
             return {
                 coffees: [],
-                deliveryAddress: undefined,
+                deliveryAddress: {},
             }
         },
     )
