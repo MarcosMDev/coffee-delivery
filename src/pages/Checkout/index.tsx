@@ -50,20 +50,24 @@ export function Checkout() {
         payment: zod.string().min(1, 'Informe a forma de pagamento'),
     })
 
+    const deliveryAddressIsEmpty = !deliveryAddress
+
     type AddressFormData = zod.infer<typeof addressFormValidationSchema>
 
     const confirmOrderForm = useForm<AddressFormData>({
         resolver: zodResolver(addressFormValidationSchema),
-        defaultValues: {
-            zip: String(deliveryAddress?.zip),
-            street: String(deliveryAddress?.street),
-            number: String(deliveryAddress?.number),
-            complement: String(deliveryAddress?.complement),
-            district: String(deliveryAddress?.district),
-            city: String(deliveryAddress?.city),
-            state: String(deliveryAddress?.state),
-            payment: String(deliveryAddress?.payment),
-        },
+        defaultValues: deliveryAddressIsEmpty
+            ? {
+                  zip: String(deliveryAddress!.zip),
+                  street: String(deliveryAddress!.street),
+                  number: String(deliveryAddress!.number),
+                  complement: String(deliveryAddress!.complement),
+                  district: String(deliveryAddress!.district),
+                  city: String(deliveryAddress!.city),
+                  state: String(deliveryAddress!.state),
+                  payment: String(deliveryAddress!.payment),
+              }
+            : {},
     })
 
     const { handleSubmit, register } = confirmOrderForm
