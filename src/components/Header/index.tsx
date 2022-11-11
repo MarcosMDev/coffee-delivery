@@ -14,8 +14,6 @@ import { CartContext } from '../../contexts/CartContext'
 export function Header() {
     const { coffees, deliveryAddress } = useContext(CartContext)
 
-    const deliveryAddressIsEmpty = !deliveryAddress
-
     return (
         <HeaderContainer>
             <NavLink to="/">
@@ -25,7 +23,7 @@ export function Header() {
                 <LocalContainer>
                     <NavLink to="/">
                         <MapPin weight="fill" size={22} />
-                        {deliveryAddressIsEmpty
+                        {deliveryAddress
                             ? `${deliveryAddress!.city} - ${
                                   deliveryAddress!.state
                               }`

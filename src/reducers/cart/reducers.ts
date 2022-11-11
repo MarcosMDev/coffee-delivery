@@ -1,4 +1,5 @@
 import { CoffeeProps } from '../../contexts/CartContext'
+import { toast } from 'react-toastify'
 import { ActionProp, ActionTypes } from './action'
 import { produce } from 'immer'
 
@@ -26,11 +27,18 @@ export function cartReducer(state: CartState, action: ActionProp): CartState {
                     (coffee) => coffee.id === action.payload.coffee.id,
                 )
 
-                if (!coffeeIndex) {
+                if (coffeeIndex !== -1) {
                     draft.coffees[coffeeIndex].amount +=
                         action.payload.coffee.amount
+
+                    toast.success('Item atualizado ao carrinho', {
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                    })
                 } else {
                     draft.coffees.push(action.payload.coffee)
+                    toast.success('Item adicionado no carrinho', {
+                        position: toast.POSITION.BOTTOM_RIGHT,
+                    })
                 }
             })
         case ActionTypes.REMOVE_ITEM_CART: {
