@@ -4,6 +4,12 @@ export const IntroContainer = styled.section`
     display: flex;
 
     padding: 5.75rem 0;
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        img {
+            display: none;
+        }
+    }
 `
 
 export const ColumnContainer = styled.div`
@@ -94,11 +100,18 @@ export const CoffeListContainer = styled.section`
 `
 
 export const ListContainer = styled.div`
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    column-gap: 1.5rem;
-    row-gap: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2.5rem;
 
     margin-bottom: 9.8125rem;
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 2.5rem;
+        align-items: center;
+        justify-items: center;
+    }
 `

@@ -7,6 +7,10 @@ export const FormContainer = styled.form`
 
     margin-top: 2.5rem;
     margin-bottom: 15rem;
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        flex-direction: column;
+    }
 `
 
 export const Container = styled.div`
@@ -99,6 +103,10 @@ export const InputContainer = styled.div`
 export const InputGroup = styled.div`
     display: flex;
     gap: 0.75rem;
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        flex-direction: column;
+    }
 `
 
 export const InputForm = styled.input`
@@ -115,6 +123,10 @@ export const InputForm = styled.input`
             return '100%'
         }
     }};
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        width: 100%;
+    }
 `
 
 export const CheckboxContainer = styled.div`
@@ -154,6 +166,10 @@ export const CheckboxContainer = styled.div`
 
     input[type='radio']:checked + span {
         border: 1px solid ${(props) => props.theme.purple};
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        flex-direction: column;
     }
 `
 
@@ -212,5 +228,9 @@ export const ButtonConfirm = styled.button`
 
     &:disabled {
         cursor: not-allowed;
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        width: 100%;
     }
 `

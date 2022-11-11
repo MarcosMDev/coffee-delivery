@@ -36,6 +36,12 @@ export const Container = styled.div`
     align-items: flex-end;
 
     gap: 6.375rem;
+
+    @media screen and (min-width: 200px) and (max-width: 640px) {
+        img {
+            display: none;
+        }
+    }
 `
 
 export const InfoSuccessContainer = styled.div`
