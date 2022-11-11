@@ -2,10 +2,14 @@ import styled from 'styled-components'
 
 export const IntroContainer = styled.section`
     display: flex;
+    flex: 1;
 
     padding: 5.75rem 0;
 
-    @media screen and (min-width: 200px) and (max-width: 640px) {
+    @media screen and (min-width: 200px) and (max-width: 1100px) {
+        align-items: center;
+        justify-content: center;
+
         img {
             display: none;
         }
@@ -110,6 +114,14 @@ export const ListContainer = styled.div`
     @media screen and (min-width: 200px) and (max-width: 640px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 2.5rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 1100px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 2.5rem;
         align-items: center;
         justify-items: center;

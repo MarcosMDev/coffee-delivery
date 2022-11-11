@@ -16,7 +16,7 @@ Loja on-line de cafés com a opção de delivery, onde o usuário adiciona ao ca
 
 A aplicação foi desenvolvida com React + Typescript e como desafio do módulo 2 do bootcamp Ignite - 2022. Neste projeto foi aplicado diversos conhecimentos visto no módulo como: Context API, layout default, rotas, formulários com React-Hook-Form, hooks (useState e useEffect), além dos fundamentos básicos da ferramenta como por exemplo a componentização.
 
-O Projeto também foi desenvolvido do total zero, apenas seguindo o layout proposto na plataforma do Figma, seguindo arrisca todos os paramentros de cores, tamanho das fontes, espaçamento e estados em que cada elemento possa assumir na aplicação, além de, ter sido incluído alguns elementos a mais a fim de enriquecer o projeto.
+O Projeto também foi desenvolvido do total zero, apenas seguindo o layout proposto na plataforma do Figma, seguindo arrisca todos os paramentros de cores, tamanho das fontes, espaçamento e estados em que cada elemento possa assumir na aplicação, além de, ter sido incluído alguns elementos a mais a fim de enriquecer o projeto, como responsividade.
  
  # 🧪 Tecnologias
 
