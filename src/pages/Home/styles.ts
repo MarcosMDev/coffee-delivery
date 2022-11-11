@@ -97,7 +97,7 @@ export const ListContainer = styled.div`
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    column-gap: 2rem;
+    column-gap: 1.5rem;
     row-gap: 2.5rem;
 
     margin-bottom: 9.8125rem;
