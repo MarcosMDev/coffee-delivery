@@ -52,9 +52,11 @@ export function Checkout() {
 
     type AddressFormData = zod.infer<typeof addressFormValidationSchema>
 
+    const deliveryAddressIsEmpty = !deliveryAddress
+
     const confirmOrderForm = useForm<AddressFormData>({
         resolver: zodResolver(addressFormValidationSchema),
-        defaultValues: deliveryAddress
+        defaultValues: deliveryAddressIsEmpty
             ? {
                   zip: String(deliveryAddress!.zip),
                   street: String(deliveryAddress!.street),
