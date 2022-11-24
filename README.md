@@ -36,7 +36,7 @@ Esse projeto foi desenvolvido com as seguintes principais tecnologias:
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/rogerrm95/coffee-delivery.git
+$ git clone https://github.com/MarcosMDev/coffee-delivery
 $ cd coffee-delivery
 ```
 Para iniciá-lo, siga os passos abaixo:
